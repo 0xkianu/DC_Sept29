@@ -35,11 +35,11 @@ let canWeGoToTheMovies = () => {
     while(i < DAYS_OF_WEEK.length) {
         dayOfWeek = DAYS_OF_WEEK[i];
         if(myFriendsSchedule[dayOfWeek]==true && myMoneySchedule[dayOfWeek] >= 10) {
-            whatDaysCanWeGoToTheMovies = whatDaysCanWeGoToTheMovies.concat(`\nOn ${dayOfWeek}?  Yes, let's go to the movies!!`);
+            whatDaysCanWeGoToTheMovies += `\nOn ${dayOfWeek}?  Yes, let's go to the movies!!`;
         } else if(myFriendsSchedule[dayOfWeek]==true || myMoneySchedule[dayOfWeek] >= 10) {
-            whatDaysCanWeGoToTheMovies = whatDaysCanWeGoToTheMovies.concat(`\nOn ${dayOfWeek}?  One of us can go to the movies`);
+            whatDaysCanWeGoToTheMovies += `\nOn ${dayOfWeek}?  One of us can go to the movies`;
         } else {
-            whatDaysCanWeGoToTheMovies = whatDaysCanWeGoToTheMovies.concat(`\nOn ${dayOfWeek}?  We can't go to the movies`);
+            whatDaysCanWeGoToTheMovies += `\nOn ${dayOfWeek}?  We can't go to the movies`;
         }
         i++;
     }
